@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Cinzel', 'Playfair Display', serif;
+    --font-mono: 'Space Grotesk', monospace;
+    
+    /* Arvane Signature Brand Palette (from Logo) */
+    --arvane-navy: #0B1B2B;
+    --arvane-navy-light: #1A2E44;
+    --arvane-gold: #C5A265;
+    --arvane-gold-light: #F4EDE0;
+    --arvane-gold-rich: #D4AF37;
+    --arvane-olive: #5E7356;
+    --arvane-olive-light: #EAEFE8;
+    --arvane-cream: #FAF8F5;
+    --arvane-border: #E8E2D5;
+    --arvane-card: #FFFFFF;
+    
+    /* Spring Morning Cheerful Palette */
+    --spring-cream: #FCFAF6;
+    --spring-sage: #059669;
+    --spring-sage-light: #D1FAE5;
+    --spring-sage-subtle: #ECFDF5;
+    --spring-coral: #F97316;
+    --spring-coral-light: #FFEDD5;
+    --spring-sun: #F59E0B;
+    --spring-sun-light: #FEF3C7;
+    --spring-text-main: #142319;
+    --spring-text-muted: #496352;
+    --spring-card: #FFFFFF;
+    --spring-border: #D1E7D8;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8F5;
+    color: #0B1B2B;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tech {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Joyful Radiant Ambient Patterns & Gradients */
+.bg-joyful-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(5, 150, 105, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 150, 105, 0.04) 1px, transparent 1px);
+}
+
+.bg-spring-morning-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(209, 250, 229, 0.6) 0%, rgba(254, 243, 199, 0.4) 40%, rgba(252, 250, 246, 0) 75%);
+}
+
+.bg-sunrise-glow {
+  background: radial-gradient(circle at 50% 10%, rgba(254, 243, 199, 0.6) 0%, rgba(252, 250, 246, 0) 70%);
+}
+
+.bg-spring-glow {
+  background: radial-gradient(circle at 50% 10%, rgba(209, 250, 229, 0.6) 0%, rgba(252, 250, 246, 0) 70%);
+}
+
+.bg-serene-glow {
+  background: radial-gradient(circle at 50% 10%, rgba(224, 242, 254, 0.6) 0%, rgba(252, 250, 246, 0) 70%);
+}
+
+.joy-glow {
+  box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.2);
+}
+
+.joy-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.joy-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px rgba(5, 150, 105, 0.12);
+}
+
+/* Custom smooth pleasant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0FDF4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10B981;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+}

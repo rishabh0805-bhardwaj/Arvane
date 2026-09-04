@@ -1,0 +1,6 @@
+{
+  "name": "Arvane - Investor Pitch Deck & Property Intelligence",
+  "description": "Institutional-quality investor pitch deck and property intelligence platform for Arvane (A brand of Pentagram Housing Promoters Pvt. Ltd.), an asset-light residential development platform across NCR.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
