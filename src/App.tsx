@@ -13,6 +13,7 @@ import SlideNavGrid from './components/SlideNavGrid';
 import PresenterNotesModal from './components/PresenterNotesModal';
 import ExecutiveBriefView from './components/ExecutiveBriefView';
 import PropertyEngineSimulator from './components/PropertyEngineSimulator';
+import DevelopmentIntelligenceEngine from './components/DevelopmentIntelligenceEngine';
 import FinancialModelExplorer from './components/FinancialModelExplorer';
 import { ThemeProvider, useTheme } from './components/ThemeContext';
 import { FloatingSparkles, OrganicFloatingShapes } from './components/VectorIllustrations';
@@ -33,6 +34,7 @@ import {
 
 function AppContent() {
   const [currentSlideId, setCurrentSlideId] = useState<number>(1);
+  const [direction, setDirection] = useState<number>(1);
   const [activeView, setActiveView] = useState<'presentation' | 'memo' | 'underwriting' | 'financials'>('presentation');
   const [isGridOpen, setIsGridOpen] = useState<boolean>(false);
   const [isNotesOpen, setIsNotesOpen] = useState<boolean>(false);
@@ -45,14 +47,17 @@ function AppContent() {
 
   // Navigation handlers
   const handlePrev = useCallback(() => {
+    setDirection(-1);
     setCurrentSlideId((prev) => Math.max(1, prev - 1));
   }, []);
 
   const handleNext = useCallback(() => {
+    setDirection(1);
     setCurrentSlideId((prev) => Math.min(totalSlides, prev + 1));
   }, [totalSlides]);
 
   const handleSelectSlide = (id: number) => {
+    setDirection(id >= currentSlideId ? 1 : -1);
     setCurrentSlideId(id);
     if (activeView !== 'presentation') {
       setActiveView('presentation');
@@ -62,6 +67,7 @@ function AppContent() {
   const handleJumpToChapter = (chapter: SlideChapter) => {
     const firstSlideInChapter = SLIDES_DATA.find((s) => s.chapter === chapter);
     if (firstSlideInChapter) {
+      setDirection(firstSlideInChapter.id >= currentSlideId ? 1 : -1);
       setCurrentSlideId(firstSlideInChapter.id);
       if (activeView !== 'presentation') {
         setActiveView('presentation');
@@ -169,14 +175,39 @@ function AppContent() {
               </div>
             </div>
 
-            {/* Slide Body Container with smooth joyful animation */}
-            <AnimatePresence mode="wait">
+            {/* Slide Body Container with smooth elegant fade & directional transition */}
+            <AnimatePresence mode="wait" custom={direction}>
               <motion.div 
                 key={currentSlideId}
-                initial={{ opacity: 0, y: 12, scale: 0.995 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -12, scale: 0.995 }}
-                transition={{ duration: 0.28, ease: "easeOut" }}
+                custom={direction}
+                variants={{
+                  enter: (dir: number) => ({
+                    x: dir > 0 ? 20 : -20,
+                    opacity: 0,
+                    scale: 0.995,
+                  }),
+                  center: {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                      duration: 0.28,
+                      ease: [0.25, 1, 0.5, 1],
+                    },
+                  },
+                  exit: (dir: number) => ({
+                    x: dir > 0 ? -20 : 20,
+                    opacity: 0,
+                    scale: 0.995,
+                    transition: {
+                      duration: 0.2,
+                      ease: [0.25, 1, 0.5, 1],
+                    },
+                  }),
+                }}
+                initial="enter"
+                animate="center"
+                exit="exit"
                 className="flex-1 min-h-[520px] lg:min-h-[560px] flex flex-col justify-center bg-white border-2 border-amber-100/80 rounded-2xl p-5 sm:p-8 shadow-xl relative overflow-hidden"
               >
                 <SlideRenderer slide={currentSlide} onNavigateSlide={handleSelectSlide} />
@@ -207,7 +238,7 @@ function AppContent() {
                   className="px-3 py-1 bg-white hover:bg-amber-50 border border-amber-200 rounded-lg text-amber-900 font-semibold flex items-center gap-1.5 transition-all text-[11px] shadow-2xs"
                 >
                   <Calculator className="w-3.5 h-3.5 text-amber-600" />
-                  <span>Slide 9: Property Engine</span>
+                  <span>Slide 9: Intelligence Engine™</span>
                 </button>
                 <button
                   onClick={() => handleSelectSlide(13)}
@@ -246,27 +277,29 @@ function AppContent() {
           </div>
         )}
 
-        {/* View Mode: Property Engine Simulator */}
+        {/* View Mode: Property Engine Simulator / Development Intelligence Engine */}
         {activeView === 'underwriting' && (
-          <div className="max-w-6xl mx-auto w-full py-8 px-4 sm:px-6 space-y-6">
-            <div className="p-6 bg-white border border-amber-200 rounded-2xl shadow-sm flex items-center justify-between">
+          <div className="max-w-7xl mx-auto w-full py-8 px-4 sm:px-6 space-y-6">
+            <div className="p-6 bg-white border border-amber-200 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <p className="text-amber-600 text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Interactive Sandbox</p>
+                <p className="text-amber-800 text-[10px] font-mono font-bold tracking-[0.2em] uppercase mb-1">
+                  Proprietary Underwriting Framework
+                </p>
                 <h2 className="text-2xl font-serif font-bold text-stone-900">
-                  Property Intelligence Engine™
+                  ARVANE DEVELOPMENT INTELLIGENCE ENGINE™
                 </h2>
-                <p className="text-xs text-stone-600 mt-1">
-                  Simulate individual plot parameters, zoning bylaws, and floor allocation models across Gurgaon, Delhi, and Noida.
+                <p className="text-xs text-stone-600 mt-1 font-serif italic">
+                  “Every Plot. Underwritten Before We Build.” • Hard 30% Minimum Project Contribution Margin Floor.
                 </p>
               </div>
               <button
                 onClick={() => setActiveView('presentation')}
-                className="px-4 py-2 bg-amber-500 text-white rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-amber-600 transition-colors shadow-sm"
+                className="px-5 py-2.5 bg-gradient-to-r from-amber-800 to-stone-900 text-white rounded-xl font-bold text-xs uppercase tracking-wider hover:from-amber-900 hover:to-black transition-all shadow-sm shrink-0"
               >
-                Return To Deck
+                Return To Presentation Deck
               </button>
             </div>
-            <PropertyEngineSimulator inline={false} />
+            <DevelopmentIntelligenceEngine inline={false} onNavigateSlide={handleSelectSlide} />
           </div>
         )}
 

@@ -55,7 +55,7 @@ export default function Navbar({
     'The Arvane Platform',
     'Project Economics & Portfolio',
     'Capital Architecture & GTM',
-    'Scale & Township Partnerships',
+    'The Evolution of Arvane',
     'The Investment Proposition',
   ];
 
@@ -106,7 +106,7 @@ export default function Navbar({
             }`}
           >
             <Calculator className="w-3.5 h-3.5" />
-            Property Engine™
+            Intelligence Engine™
           </button>
 
           <button

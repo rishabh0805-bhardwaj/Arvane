@@ -116,18 +116,21 @@ export const PORTFOLIO_TOTALS = {
 };
 
 export const FUNDING_DETAILS = {
-  initialCapitalRequirement: "₹6–7 CRORE",
-  proposedEquityRange: "5–8%",
-  equityType: "Strategic Minority Equity",
-  valuationNote: "Indicative / subject to final valuation, investment structure, due diligence and negotiation.",
+  initialCapitalRequirement: "₹7.0 CRORE",
+  proposedEquity: "5.0%",
+  equityType: "Permanent Strategic Equity",
+  profitSharePercent: "10.0%",
+  returnThreshold: "200% Return Cap (₹14.0 Cr Total Cash Payout)",
+  dealStructureTitle: "5% Equity + 10% Profit Sharing (until 200% Return)",
+  valuationNote: "Subject to legal due diligence, definitive SHA/SSA execution, and board governance agreements.",
   keyUseBuckets: [
-    { label: "Development Working Capital", range: "₹3.0 – 3.5 Cr", share: 48, icon: "Wallet", description: "Direct project cashflow bridging, subcontractor advances, MEP mobilisation" },
-    { label: "Construction Mobilisation", range: "~₹1.0 Cr", share: 15, icon: "Hammer", description: "Vendor deposits, early material procurement contracts, site infra" },
-    { label: "Deal Execution / Acquisition", range: "~₹0.5 Cr", share: 8, icon: "FileText", description: "Legal title search, structural audit, revenue documentation, registration" },
-    { label: "Sales & Marketing", range: "~₹0.4 Cr", share: 6, icon: "TrendingUp", description: "Channel partner activation, experience center mockups, digital targeting" },
-    { label: "Technology / Feasibility Platform", range: "~₹0.3 Cr", share: 5, icon: "Cpu", description: "Property Intelligence Engine proprietary database, GIS and automated underwriting" },
-    { label: "Corporate Team & Operations", range: "~₹0.5 Cr", share: 8, icon: "Users", description: "Senior project managers, structural engineers, regulatory liaisons" },
-    { label: "Contingency / Liquidity Reserve", range: "~₹0.3 – 0.8 Cr", share: 10, icon: "ShieldCheck", description: "Buffer for price fluctuations, unexpected approval timelines, rainy-day capital" }
+    { label: "Development Working Capital", range: "₹3.50 Cr", share: 50, icon: "Wallet", description: "Direct project cashflow bridging, vendor & subcontractor advances, MEP mobilisation" },
+    { label: "Construction Mobilisation", range: "₹1.05 Cr", share: 15, icon: "Hammer", description: "Long-lead material procurement (steel, cement, stone), site infrastructure" },
+    { label: "Deal Execution / Acquisition", range: "₹0.55 Cr", share: 8, icon: "FileText", description: "30-year title diligence, soil/structural audits, JDA registration & statutory sanctions" },
+    { label: "Corporate PMO & Operations", range: "₹0.55 Cr", share: 8, icon: "Users", description: "Senior civil engineers, quality assurance auditors, procurement specialists" },
+    { label: "Sales, Marketing & Channels", range: "₹0.45 Cr", share: 6, icon: "TrendingUp", description: "Tier-1 broker channel activation, high-net-worth customer targeting & show floors" },
+    { label: "Technology & Underwriting Platform", range: "₹0.35 Cr", share: 5, icon: "Cpu", description: "Proprietary Development Intelligence Engine, GIS plot mapping & cost indices" },
+    { label: "Contingency & Liquidity Reserve", range: "₹0.55 Cr", share: 8, icon: "ShieldCheck", description: "Unforeseen price fluctuation buffer, approval delay cushion & liquidity hedge" }
   ]
 };
 

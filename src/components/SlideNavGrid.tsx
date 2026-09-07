@@ -24,7 +24,7 @@ export default function SlideNavGrid({
     'The Arvane Platform',
     'Project Economics & Portfolio',
     'Capital Architecture & GTM',
-    'Scale & Township Partnerships',
+    'The Evolution of Arvane',
     'The Investment Proposition',
   ];
 

@@ -33,7 +33,7 @@ export default function ExecutiveBriefView({
 
         <div className="p-4 bg-[#FAF8F5] border border-[#E8E2D5] rounded-2xl text-xs text-stone-700 flex flex-wrap items-center justify-between gap-4 shadow-2xs">
           <div>
-            <strong className="text-[#0B1B2B]">Strategic Ask:</strong> ₹6–7 Crore Growth Capital • <strong className="text-[#0B1B2B]">Target Equity:</strong> 5–8% Minority
+            <strong className="text-[#0B1B2B]">Strategic Ask:</strong> ₹7.0 Crore Growth Capital • <strong className="text-[#0B1B2B]">Structure:</strong> 5.0% Permanent Equity + 10.0% Profit Sharing (until 200% Return / ₹14 Cr)
           </div>
           <div className="text-[#5E7356] font-mono uppercase tracking-wider text-[11px] font-bold">
             NCR Residential Development Platform

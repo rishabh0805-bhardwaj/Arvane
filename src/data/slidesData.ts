@@ -143,16 +143,21 @@ export const SLIDES_DATA: SlideData[] = [
     slug: 'property-intelligence-engine',
     chapter: 'The Arvane Platform',
     categoryBadge: 'Proprietary Technology & Underwriting',
-    title: 'THE ARVANE PROPERTY INTELLIGENCE ENGINE',
-    subtitle: 'Algorithmic underwriting turning complex municipal bylaws and cost matrices into instant Go / Negotiate / Reject decisions.',
-    highlightText: 'Technology-enabled acquisition and risk-adjusted capital allocation.',
+    title: 'ARVANE DEVELOPMENT INTELLIGENCE ENGINE™',
+    tagline: '“Every Plot. Underwritten Before We Build.”',
+    subtitle: 'Data-driven feasibility. Disciplined negotiations. Better development decisions. Converting plot-level information into structured institutional economics.',
+    highlightText: '“Don\'t negotiate first. Underwrite first. Structure follows the economics.”',
+    disclaimerRequired: true,
     speakerNotes: {
-      keyPoint: "Our proprietary engine gives us institutional underwriting speed and precision before committing capital.",
+      keyPoint: "The Engine is our core long-term competitive advantage: a proprietary development underwriting framework converting plot attributes into institutional Go / Negotiate / Reject decisions.",
       talkingPoints: [
-        "Inputs: Plot size, coordinates, authority bylaws, FAR, comparables, BOQ estimates, finance costs, and sales velocity.",
-        "Outputs: Permissible FAR, Gross Development Value, Owner vs Company Entitlement, Breakeven Selling Price, Project IRR, and Risk Score.",
-        "Decision triage: Clear GO, NEGOTIATE, or REJECT mandate."
-      ]
+        "Philosophy: 'Don't negotiate first. Underwrite first.' and 'Structure follows the economics.'",
+        "9 Core Input Modules: Land acquisition cost, holding period, owner expectation, development potential (FAR/setbacks), civil construction BOQ, interior fit-out differentiation, other project costs, 3-case market realizations, and our 30% margin floor.",
+        "16 Commercial Outputs: Project GDV, ARVANE revenue, required selling price, max viable land consideration, 30%+ contribution margin verification, IRR, and Deal Score /100.",
+        "Reverse Engineering: Works backwards from owner expectation and 30% margin hurdle to flag unrealistic selling-price assumptions.",
+        "The Data Flywheel: Every plot evaluated and executed feeds proprietary data back into the engine, compounding our competitive moat."
+      ],
+      investorQAndA: "Q: Is this an AI product? A: It is currently a disciplined, structured proprietary internal feasibility and deal-structuring engine on a clear 5-phase roadmap toward a predictive development intelligence platform."
     }
   },
   {
@@ -279,189 +284,238 @@ export const SLIDES_DATA: SlideData[] = [
   },
   {
     id: 17,
-    slug: 'capital-flywheel',
+    slug: 'gtm-strategy',
     chapter: 'Capital Architecture & GTM',
-    categoryBadge: 'The Growth Compounding Engine',
-    title: 'OUR CAPITAL FLYWHEEL',
-    subtitle: 'A self-reinforcing loop of capital deployment, fast monetisation, and platform scaling.',
-    highlightText: 'BUILD → SELL → RECYCLE → SCALE',
+    categoryBadge: 'Supply & Demand Execution',
+    title: 'GTM: DUAL ACQUISITION ENGINE',
+    subtitle: 'Connecting non-developing plot owners with discerning luxury floor homebuyers.',
+    highlightText: 'Landowner Sourcing: "Don\'t Sell Your Plot. Develop It." | Homebuyer Brand: "Arvane Curated Living"',
     speakerNotes: {
-      keyPoint: "Fast project turnaround creates a compounding capital velocity engine.",
+      keyPoint: "Our dual GTM engine simultaneously sources high-net-worth plot inventory and affluent luxury homebuyers.",
       talkingPoints: [
-        "Investor Capital -> Project Acquisition -> Development -> Sales -> Capital Recovery -> Profit -> Reinvestment.",
-        "Each completed project strengthens our Arvane brand across NCR, expands vendor discounts, and unlocks larger opportunities."
+        "Supply channels: Direct title records outreach, local registry intelligence, top-tier CP/broker networks, and word-of-mouth referral trust.",
+        "Demand channels: Exclusive digital campaigns, HNI wealth management channels, curated experience centers, and turnkey move-in certainty."
       ]
     }
   },
   {
     id: 18,
-    slug: 'gtm-landowners',
-    chapter: 'Capital Architecture & GTM',
-    categoryBadge: 'Supply-Side Acquisition Strategy',
-    title: 'GTM: LANDOWNER ACQUISITION',
-    subtitle: 'Targeting non-developing plot owners through direct sourcing, data, and broker networks.',
-    highlightText: 'Core Landowner Proposition: "DON\'T SELL YOUR PLOT. DEVELOP IT."',
+    slug: 'evolution-roadmap',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: '6-Stage Strategic Expansion Roadmap',
+    title: 'THE EVOLUTION OF ARVANE',
+    subtitle: 'A progressive, capital-efficient journey from asset-light plot development to institutional scale.',
+    highlightText: '“Prove the engine. Recycle the capital. Expand the opportunity set.”',
     speakerNotes: {
-      keyPoint: "Our supply-side engine targets high-net-worth plot owners in key NCR sectors.",
+      keyPoint: "ARVANE's growth is a methodical evolution from proving the execution engine to accessing 100+ plot township pipelines and institutional scale.",
       talkingPoints: [
-        "Channels: Direct landowner outreach, local registry intelligence, top-tier CP/broker networks, and digital targeted marketing.",
-        "Value proposition: Retain 2-3 luxury floors, eliminate personal stress, and capture ₹3-5 Cr incremental equity."
+        "Stage 1: Landowner Partnerships (Asset-Light proof of model over approx. 2 years).",
+        "Stage 2: Repeatable Engine (Reaching ~1 deal/month operating cadence as a milestone).",
+        "Stage 3: Selective Ownership (Adding owned plots only where risk-adjusted margins are superior).",
+        "Stage 4: Township Developer Partnerships (Accessing 10–100+ plot institutional pipelines).",
+        "Stage 5: Large-Parcel JVs (Multi-project consortium developments with institutional capital).",
+        "Stage 6: High-Rise Communities (Platform manager for master-planned residential enclaves)."
       ]
     }
   },
   {
     id: 19,
-    slug: 'buyer-acquisition',
-    chapter: 'Capital Architecture & GTM',
-    categoryBadge: 'Demand-Side Marketing & Sales',
-    title: 'BUYER ACQUISITION: THE HOME JOURNEY',
-    subtitle: 'Positioning Arvane floors as curated, turnkey architectural statements for affluent families.',
-    highlightText: 'Concept → Design → Construction → Interiors → Finished Home',
+    slug: 'multiple-structures',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'Deal Architecture & Flexibility',
+    title: 'ONE PLATFORM. MULTIPLE DEVELOPMENT STRUCTURES.',
+    subtitle: 'Deploying the optimal transaction structure for each specific asset to maximize risk-adjusted equity returns.',
+    highlightText: '“Structure follows the economics — not rigid dogma.”',
     speakerNotes: {
-      keyPoint: "We do not sell legal JDA mechanics to buyers; we sell luxury, privacy, architectural prestige, and turnkey peace of mind.",
+      keyPoint: "ARVANE is not dogmatically locked into a single legal format. We match the structure to deal economics.",
       talkingPoints: [
-        "Buyers want ready-to-move-in luxury floors with verified occupancy certificates and pristine finishes.",
-        "Our marketing emphasizes bespoke Italian marble, German hardware, smart automation, and 1-year developer maintenance warranty."
+        "Structure 1: Landowner JDA (Asset-light baseline for high-velocity geographic expansion).",
+        "Structure 2: Arvane-Owned Plot (Selectively acquired for maximum retained margin and flagship showcase).",
+        "Structure 3: Township Partnership (Preferential plot access and volume pricing in master townships).",
+        "Structure 4: Profit-Sharing JV (Post-cost net profit split with strategic landholders).",
+        "Structure 5: Large-Scale Consortium JV (Institutional development management platform with carried interest)."
       ]
     }
   },
   {
     id: 20,
-    slug: 'phased-growth',
-    chapter: 'Scale & Township Partnerships',
-    categoryBadge: '3-Phase Strategic Roadmap',
-    title: 'PHASED PLATFORM GROWTH STRATEGY',
-    subtitle: 'From direct plot partnerships to multi-project platform and institutional township alliances.',
+    slug: 'capital-flywheel-evolution',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'The Growth Compounding Engine',
+    title: 'THE CAPITAL FLYWHEEL',
+    subtitle: 'A self-reinforcing loop of capital deployment, fast monetisation, and platform scaling.',
+    highlightText: 'BUILD → SELL → RECYCLE → SCALE',
     speakerNotes: {
-      keyPoint: "A disciplined transition from standalone plot JVs to standardized multi-project operations and township partnerships.",
+      keyPoint: "Fast project turnaround creates a compounding capital velocity engine without balance-sheet inflation.",
       talkingPoints: [
-        "Phase 1: Direct Landowner Partnerships across Gurgaon, Delhi, and Noida.",
-        "Phase 2: Multi-Project NCR Platform with standardized procurement, BIM design, and sales pipelines.",
-        "Phase 3: Strategic Township Developer Partnerships with institutional land aggregators."
+        "Growth Capital -> Project Acquisition -> Development & Build -> Rapid Sales Velocity -> Capital Recovery -> Project Profit -> Continuous Reinvestment -> Larger Scaled Pipeline.",
+        "100% of deployed capital is recovered within ~12–14 months and rotated into subsequent developments."
       ]
     }
   },
   {
     id: 21,
-    slug: 'township-partnership',
-    chapter: 'Scale & Township Partnerships',
-    categoryBadge: 'Institutional Evolution',
-    title: 'THE TOWNSHIP PARTNERSHIP OPPORTUNITY',
-    subtitle: 'Unlocking scale by partnering with large master-planned township developers across NCR.',
-    highlightText: 'Township Developer (Plots) + Arvane (Capital & Execution) = Scaled Residential Inventory',
+    slug: 'strategic-moat',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'Strategic Moats & Capabilities',
+    title: 'THE STRATEGIC MOAT',
+    subtitle: 'Four interconnected institutional pillars converging into proprietary development opportunity access.',
+    highlightText: 'PROPERTY INTEL + EXECUTION ENGINE + CAPITAL RECYCLING + NETWORK = DEVELOPMENT OPPORTUNITY ACCESS',
     speakerNotes: {
-      keyPoint: "Township developers have hundreds of plotted acres but lack the bandwidth to construct boutique builder floors.",
+      keyPoint: "Our moat is not just land access; it is the institutional convergence of data, delivery, and capital velocity.",
       talkingPoints: [
-        "Illustrative developer archetypes: DLF, BPTP, Orris, Adani, and major NCR plotted township creators.",
-        "Arvane serves as the dedicated residential development operator, capturing bulk procurement savings and frictionless plot inventory."
+        "Pillar 1: Property Intelligence Engine (plot-level feasibility, algorithmic triage, margin floor protection).",
+        "Pillar 2: Execution Engine (integrated design, BOQ locked contractor procurement, curated turnkey interiors).",
+        "Pillar 3: Capital Recycling (12–14 month rotation, zero land debt drag).",
+        "Pillar 4: Development Network (landowner trust referral ecosystem, township alliances, institutional capital relationships)."
       ]
     }
   },
   {
     id: 22,
-    slug: 'long-term-model',
-    chapter: 'Scale & Township Partnerships',
-    categoryBadge: 'Platform Maturity',
-    title: 'LONG-TERM PLATFORM EVOLUTION',
-    subtitle: 'Transforming from a plot developer into a diversified institutional residential platform.',
-    highlightText: 'From Individual Plots to an Institutional Development Platform.',
+    slug: 'township-opportunity',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'Pipeline Multiplier',
+    title: 'THE TOWNSHIP PARTNERSHIP OPPORTUNITY: THE NEXT LEVEL OF LAND ACCESS',
+    subtitle: 'Transforming land access from fragmented individual plot negotiations to continuous multi-plot pipelines.',
+    highlightText: 'Today: 1 Plot Sourcing → Future: 1 Developer / 10–100+ Plots Multi-Project Pipeline',
     speakerNotes: {
-      keyPoint: "The long-term vision is an institutional development manager managing multi-city residential portfolios under Arvane.",
+      keyPoint: "Township developers have hundreds of plotted acres but lack bandwidth for boutique builder floor execution.",
       talkingPoints: [
-        "Evolution path: Plot-by-plot -> Multi-project NCR -> Township partnerships -> Institutional capital co-investments -> Pan-India expansion.",
-        "Product expansion into luxury villas, gated low-rise enclaves, and urban redevelopment."
+        "Framed as future strategic partnership opportunities with master-planned township developers across NCR.",
+        "Unlocks 8 strategic advantages: lower acquisition friction, faster sourcing, prime gated micro-locations, lower CAC for land, and standardized modular planning."
       ]
     }
   },
   {
     id: 23,
-    slug: 'competitive-advantage',
-    chapter: 'Scale & Township Partnerships',
-    categoryBadge: 'Strategic Moats & Capabilities',
-    title: 'FIVE PILLARS OF COMPETITIVE ADVANTAGE',
-    subtitle: 'A structural edge built on asset-light mechanics, proprietary underwriting, and full integration.',
+    slug: 'economic-logic',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'Three-Sided Value Proposition',
+    title: 'THE ECONOMIC LOGIC',
+    subtitle: 'A symbiotic ecosystem creating win-win value for township developers, ARVANE, and luxury homebuyers.',
+    highlightText: 'Township Developer (Plots) ↕ ARVANE (Platform Execution) ↕ Home Buyer (Premium Living)',
     speakerNotes: {
-      keyPoint: "Review the five pillars that differentiate Arvane from both unorganized local builders and bulky corporate conglomerates.",
+      keyPoint: "Our platform aligns incentives across all three counterparties.",
       talkingPoints: [
-        "1. Asset-Light Model (no land bank debt).",
-        "2. Project-Specific Underwriting (no blanket assumptions).",
-        "3. Integrated Development (design to sales under one roof).",
-        "4. Tech-Enabled Feasibility (algorithmic zoning & margin triage).",
-        "5. Capital Recycling (fast rotation of capital)."
+        "Township Developer: Monetizes unsold plot inventory faster, adds specialized floor capability, avoids operational overhead.",
+        "ARVANE: Obtains scaled pipeline with preferential economics, zero land debt, and minimal land acquisition friction.",
+        "Homebuyer: Receives vastu-compliant, architecturally distinguished turnkey floors with verified OC and developer warranty."
       ]
     }
   },
   {
     id: 24,
-    slug: 'investment-thesis',
-    chapter: 'The Investment Proposition',
-    categoryBadge: 'Core Investment Rationale',
-    title: 'THE INVESTMENT THESIS',
-    subtitle: 'Five core structural convictions defining Arvane\'s value creation opportunity.',
-    highlightText: 'FROM INDIVIDUAL PLOTS TO A DEVELOPMENT PLATFORM.',
+    slug: 'five-year-evolution',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'Illustrative 5-Year Horizon',
+    title: 'THE 5-YEAR STRATEGIC EVOLUTION',
+    subtitle: 'An illustrative, disciplined roadmap from micro-market proof of concept to diversified residential platform.',
+    highlightText: 'Illustrative Strategic Objectives • Adapting Dynamically to Micro-Market Opportunities',
     speakerNotes: {
-      keyPoint: "Summarize the overarching investment logic into five undeniable market truths.",
+      keyPoint: "Our 5-year trajectory balances disciplined asset-light fundamentals with expanding platform horizons.",
       talkingPoints: [
-        "1. Large land value does not require outright land acquisition.",
-        "2. Underutilized plots can be converted into higher-value luxury inventory.",
-        "3. Every project can be underwritten independently with clear risk margins.",
-        "4. Integrated design + construction + interiors captures 25-35% project margin.",
-        "5. Proven micro-execution scales into institutional township partnerships."
+        "Year 1: 1–2 Projects (Prove model & micro-execution in Gurgaon/Delhi).",
+        "Year 2: 3–4+ Projects (Repeatability & target ~1 deal/month operating milestone).",
+        "Year 3: Selective Ownership & initial township partnership conversations.",
+        "Year 4: Multi-Plot Township Pipelines (10–25 plot mandates & institutional project finance).",
+        "Year 5+: Large-Parcel JVs & illustrative high-rise community co-developments."
       ]
     }
   },
   {
     id: 25,
-    slug: 'funding-ask',
-    chapter: 'The Investment Proposition',
-    categoryBadge: 'Capital Call & Deployment Scope',
-    title: 'FUNDING ASK: ₹6–7 CRORE',
-    subtitle: 'Strategic growth capital to accelerate deal execution, working capital, team, and technology.',
-    highlightText: 'Progressive deployment and continuous capital recycling across NCR projects.',
+    slug: 'platform-manifesto',
+    chapter: 'The Evolution of Arvane',
+    categoryBadge: 'Strategic Conviction',
+    title: 'WE ARE BUILDING A DEVELOPMENT PLATFORM, NOT A COLLECTION OF PROJECTS.',
+    subtitle: 'The investor thesis: Transforming fragmented land opportunities into a capital-efficient residential engine.',
+    highlightText: '“We don\'t need to own every piece of land to become a large developer. We need to control the right development opportunities.”',
     speakerNotes: {
-      keyPoint: "We are raising ₹6-7 Cr strategic growth capital to scale our acquisition and execution engine.",
+      keyPoint: "Summarize the core conviction: ARVANE is creating scalable institutional development infrastructure.",
       talkingPoints: [
-        "Capital is not locked in land purchases; it is deployed into project working capital, vendor mobilization, and pipeline acquisition.",
-        "As early floors are pre-sold and completed, capital is recycled to fund subsequent developments without heavy dilution."
+        "Every process, algorithm, and supplier relationship built today scales into tomorrow's institutional platform.",
+        "We combine asset-light agility with selective ownership and master developer alliances."
       ]
     }
   },
   {
     id: 26,
-    slug: 'investor-equity',
+    slug: 'investment-thesis',
     chapter: 'The Investment Proposition',
-    categoryBadge: 'Proposed Transaction Structure',
-    title: 'STRATEGIC MINORITY EQUITY: 5–8%',
-    subtitle: 'Offering 5%–8% strategic equity for ₹6–7 Crore growth capital.',
-    highlightText: 'Indicative / subject to final valuation, investment structure, due diligence and definitive agreements.',
+    categoryBadge: 'Core Investment Rationale',
+    title: 'THE INVESTMENT THESIS',
+    subtitle: 'Five core structural convictions defining Arvane\'s value creation opportunity.',
+    highlightText: 'FROM INDIVIDUAL PLOTS TO A SCALABLE RESIDENTIAL PLATFORM.',
     speakerNotes: {
-      keyPoint: "We propose a 5-8% strategic minority equity stake for ₹6-7 Cr capital commitment.",
+      keyPoint: "Summarize the overarching investment logic into five undeniable market truths.",
       talkingPoints: [
-        "Structure provides meaningful participation in platform equity, corporate distributions, and capital appreciation.",
-        "Founders seek strategic partners who bring capital access, institutional governance, and real estate networks."
+        "1. Large land value does not require outright land acquisition.",
+        "2. Underutilized plots can be converted into higher-value luxury inventory.",
+        "3. Every project can be underwritten independently with clear risk margins (>25% hurdle).",
+        "4. Integrated design + construction + interiors captures 25–35% project margin.",
+        "5. Proven micro-execution scales into institutional township partnerships."
       ]
     }
   },
   {
     id: 27,
-    slug: 'use-of-funds',
+    slug: 'funding-ask',
     chapter: 'The Investment Proposition',
-    categoryBadge: 'Capital Allocation Breakdown',
-    title: 'USE OF FUNDS: DISCIPLINED ALLOCATION',
-    subtitle: 'Detailed allocation plan ensuring maximum deployment into revenue-generating assets.',
-    highlightText: 'Illustrative — subject to final project pipeline and board-approved deployment plan.',
+    categoryBadge: 'Capital Call & Deployment Scope',
+    title: 'FUNDING ASK: ₹7 CRORE',
+    subtitle: 'Strategic growth capital to accelerate deal execution, project working capital, PMO team, and technology.',
+    highlightText: 'Progressive deployment and continuous capital recycling across NCR projects.',
     speakerNotes: {
-      keyPoint: "Over 63% of capital is deployed directly into project working capital and construction mobilization.",
+      keyPoint: "We are raising ₹7.0 Crore strategic growth capital to scale our acquisition and execution engine.",
       talkingPoints: [
-        "Development Working Capital: ₹3.0-3.5 Cr (48%).",
-        "Construction Mobilisation: ~₹1.0 Cr (15%).",
-        "Deal Execution & Title Diligence: ~₹0.5 Cr (8%).",
-        "Sales, Tech, Corporate Team & Reserves: balance ~₹1.5-2.0 Cr."
+        "Capital is not locked in speculative land purchases; it is deployed into project working capital, vendor mobilization, and pipeline acquisition.",
+        "As initial floors are pre-sold and completed within 12-14 month cycles, capital is recycled to fund subsequent developments without dilution."
       ]
     }
   },
   {
     id: 28,
+    slug: 'investment-opportunity',
+    chapter: 'The Investment Proposition',
+    categoryBadge: 'Proposed Transaction Structure',
+    title: 'INVESTMENT OPPORTUNITY: ₹7 CR FOR 5% EQUITY',
+    subtitle: '₹7.0 Crore for 5% Strategic Equity + 10% Profit Sharing until 200% Capital Return (₹14.0 Cr). Open to flexible profit-sharing terms.',
+    highlightText: 'Dual-layer investor return: Accelerated cash payback (2.0x MoIC) + permanent platform equity upside. Open to flexible structuring.',
+    speakerNotes: {
+      keyPoint: "We present the Investment Opportunity: ₹7.0 Crore for 5% equity, backed by a 10% profit-sharing mechanism until 200% return is achieved (₹14 Cr returned), with complete openness on profit sharing structuring.",
+      talkingPoints: [
+        "1. Capital Ask: ₹7.0 Cr growth capital deployed directly into high-margin asset-light residential developments in NCR.",
+        "2. Strategic Equity: 5% permanent platform equity with board observer rights and dividend rights.",
+        "3. Accelerated Payback: 10% profit sharing from project earnings until the investor receives ₹14.0 Cr (200% of original investment).",
+        "4. Open on Profit Sharing: We are actively open to tailoring the profit-sharing percentage, hurdle rates, and repayment mechanics based on investor alignment.",
+        "5. Permanent Upside: Once 200% return is achieved, the investor permanently retains 5% strategic equity in the scaling platform."
+      ]
+    }
+  },
+  {
+    id: 29,
+    slug: 'use-of-funds',
+    chapter: 'The Investment Proposition',
+    categoryBadge: 'Capital Allocation Breakdown',
+    title: 'USE OF FUNDS: DISCIPLINED ALLOCATION (₹7 CR)',
+    subtitle: 'Detailed allocation plan ensuring maximum deployment into revenue-generating assets.',
+    highlightText: 'Over 65% of capital is deployed directly into income-generating development working capital and mobilization.',
+    speakerNotes: {
+      keyPoint: "Over 65% of capital is deployed directly into project working capital and construction mobilization.",
+      talkingPoints: [
+        "Development Working Capital: ₹3.50 Cr (50.0%).",
+        "Construction Mobilisation: ₹1.05 Cr (15.0%).",
+        "Deal Execution & Title Diligence: ₹0.55 Cr (7.8%).",
+        "Corporate PMO & Operations: ₹0.55 Cr (7.8%).",
+        "Sales, Marketing & Channel Activation: ₹0.45 Cr (6.5%).",
+        "Technology & Underwriting Engine: ₹0.35 Cr (5.0%).",
+        "Contingency & Liquidity Reserve: ₹0.55 Cr (7.9%)."
+      ]
+    }
+  },
+  {
+    id: 30,
     slug: 'risks-mitigation',
     chapter: 'The Investment Proposition',
     categoryBadge: 'Comprehensive Risk Management',
@@ -477,38 +531,6 @@ export const SLIDES_DATA: SlideData[] = [
     }
   },
   {
-    id: 29,
-    slug: 'three-year-vision',
-    chapter: 'The Investment Proposition',
-    categoryBadge: 'Operational Milestones',
-    title: '3-YEAR OPERATIONAL VISION',
-    subtitle: 'A disciplined roadmap from proof-of-concept to institutional township scale.',
-    speakerNotes: {
-      keyPoint: "Realistic, execution-focused operational goals for Years 1, 2, and 3.",
-      talkingPoints: [
-        "Year 1: Prove the model with initial NCR projects; establish vendor and landowner acquisition engines.",
-        "Year 2: Build repeatability, standardize feasibility, expand the tech platform, and accelerate capital rotation.",
-        "Year 3: Scale to multiple simultaneous developments and initiate institutional township partnership conversations."
-      ]
-    }
-  },
-  {
-    id: 30,
-    slug: 'the-end-game',
-    chapter: 'The Investment Proposition',
-    categoryBadge: 'Strategic Horizon',
-    title: 'THE END GAME: A SCALABLE PLATFORM',
-    subtitle: 'From individual landowners to multi-acre institutional developer partnerships.',
-    highlightText: 'We are not building one project. We are building a repeatable system for turning land into value.',
-    speakerNotes: {
-      keyPoint: "Reiterate the long-term vision: Arvane as the premier asset-light development platform of NCR.",
-      talkingPoints: [
-        "We are creating the infrastructure for repeatable, high-margin residential development.",
-        "Every process, algorithm, and vendor relationship built today scales directly into tomorrow's institutional platform."
-      ]
-    }
-  },
-  {
     id: 31,
     slug: 'closing',
     chapter: 'The Investment Proposition',
@@ -516,13 +538,13 @@ export const SLIDES_DATA: SlideData[] = [
     title: 'YOUR LAND. OUR DEVELOPMENT. SHARED VALUE.',
     tagline: 'ARVANE • A BRAND OF PENTAGRAM HOUSING PROMOTERS PVT. LTD.',
     subtitle: 'NCR • Residential Development • Builder Floors • Strategic Partnerships',
-    highlightText: '₹6–7 Cr Strategic Growth Capital Discussion',
+    highlightText: '₹7 Cr Strategic Growth Capital • 5% Equity + 10% Profit Sharing (200% Return Cap)',
     speakerNotes: {
-      keyPoint: "Thank the investors and open the floor for detailed Q&A and term sheet structuring.",
+      keyPoint: "Thank the investors and open the floor for detailed Q&A on the ₹7 Cr ask (5% equity + 10% profit share until 200% return).",
       talkingPoints: [
         "Thank you for your time and consideration.",
         "We invite you to partner with us as foundational strategic investors in Arvane (Pentagram Housing Promoters).",
-        "Let us explore how we can collaboratively build NCR's leading asset-light residential development platform."
+        "Let us explore how we can collaboratively build NCR's leading asset-light residential development platform with this aligned 5% equity + 10% profit share structure."
       ]
     }
   }
@@ -535,6 +557,7 @@ export const CHAPTER_COLORS: Record<string, { badgeBg: string; badgeText: string
   'The Pentagram Platform': { badgeBg: 'bg-[#EAEFE8]', badgeText: 'text-[#4A6044]', accentBorder: 'border-[#5E7356]', indicator: 'bg-[#5E7356]' },
   'Project Economics & Portfolio': { badgeBg: 'bg-[#F4EDE0]', badgeText: 'text-[#0B1B2B]', accentBorder: 'border-[#C5A265]', indicator: 'bg-[#C5A265]' },
   'Capital Architecture & GTM': { badgeBg: 'bg-[#F4EDE0]', badgeText: 'text-[#0B1B2B]', accentBorder: 'border-[#C5A265]', indicator: 'bg-[#C5A265]' },
+  'The Evolution of Arvane': { badgeBg: 'bg-[#F4EDE0]', badgeText: 'text-[#0B1B2B]', accentBorder: 'border-[#C5A265]', indicator: 'bg-[#C5A265]' },
   'Scale & Township Partnerships': { badgeBg: 'bg-[#EAEFE8]', badgeText: 'text-[#4A6044]', accentBorder: 'border-[#5E7356]', indicator: 'bg-[#5E7356]' },
   'The Investment Proposition': { badgeBg: 'bg-[#F4EDE0]', badgeText: 'text-[#0B1B2B]', accentBorder: 'border-[#C5A265]', indicator: 'bg-[#C5A265]' }
 };

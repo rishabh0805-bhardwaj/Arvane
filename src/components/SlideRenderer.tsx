@@ -42,6 +42,7 @@ import {
   RISKS_AND_MITIGATIONS 
 } from '../data/portfolioData';
 import PropertyEngineSimulator from './PropertyEngineSimulator';
+import DevelopmentIntelligenceEngine from './DevelopmentIntelligenceEngine';
 import FinancialModelExplorer from './FinancialModelExplorer';
 import { 
   InteractiveWorkingModelDiagram, 
@@ -51,6 +52,16 @@ import {
   GrowthSunburstVector 
 } from './VectorIllustrations';
 import { ArvaneLogo } from './ArvaneLogo';
+import { 
+  EvolutionRoadmapMaster,
+  MultipleStructuresView,
+  CapitalFlywheelView,
+  StrategicMoatView,
+  TownshipOpportunityView,
+  EconomicLogicView,
+  FiveYearEvolutionView,
+  PlatformManifestoView
+} from './EvolutionRoadmap';
 
 interface SlideRendererProps {
   slide: SlideData;
@@ -173,15 +184,19 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="pt-2 flex flex-wrap items-center gap-4"
+              className="pt-2 flex flex-wrap items-center gap-3.5"
             >
-              <div className="px-5 py-2.5 rounded-2xl bg-amber-50/90 border border-amber-300 flex items-center gap-3 shadow-2xs">
+              <div className="px-5 py-2.5 rounded-2xl bg-amber-50/90 border border-amber-300 flex items-center gap-2.5 shadow-2xs">
                 <span className="text-xs text-amber-800 font-mono uppercase font-bold">Strategic Capital Ask:</span>
-                <span className="text-base font-bold text-amber-950 font-mono">₹6–7 Crore</span>
+                <span className="text-base font-extrabold text-amber-950 font-mono">₹7 Crore</span>
               </div>
-              <div className="px-5 py-2.5 rounded-2xl bg-emerald-50/90 border border-emerald-300 flex items-center gap-3 shadow-2xs">
+              <div className="px-5 py-2.5 rounded-2xl bg-emerald-50/90 border border-emerald-300 flex items-center gap-2.5 shadow-2xs">
                 <span className="text-xs text-emerald-800 font-mono uppercase font-bold">Target Equity:</span>
-                <span className="text-base font-bold text-emerald-950 font-mono">5–8% Minority</span>
+                <span className="text-base font-extrabold text-emerald-950 font-mono">5% Equity</span>
+              </div>
+              <div className="px-4 py-2.5 rounded-2xl bg-sky-50/90 border border-sky-300 flex items-center gap-2.5 shadow-2xs">
+                <span className="text-xs text-sky-800 font-mono uppercase font-bold">Profit Sharing:</span>
+                <span className="text-xs sm:text-sm font-bold text-sky-950 font-mono">10% until 200% Return <span className="font-sans font-semibold text-[11px] text-sky-700 bg-sky-100/80 px-2 py-0.5 rounded-full ml-1">(Open to Structure)</span></span>
               </div>
             </motion.div>
           </div>
@@ -735,12 +750,12 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
       );
 
     /* ----------------------------------------------------
-       SLIDE 9: THE PENTAGRAM PROPERTY INTELLIGENCE ENGINE
+       SLIDE 9: ARVANE DEVELOPMENT INTELLIGENCE ENGINE™
     ---------------------------------------------------- */
     case 9:
       return (
         <div className="space-y-4">
-          <PropertyEngineSimulator inline={false} />
+          <DevelopmentIntelligenceEngine inline={true} onNavigateSlide={onNavigateSlide} />
         </div>
       );
 
@@ -1205,416 +1220,140 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
       );
 
     /* ----------------------------------------------------
-       SLIDE 17: OUR CAPITAL FLYWHEEL
+       SLIDE 17: GTM: DUAL ACQUISITION ENGINE
     ---------------------------------------------------- */
     case 17:
       return (
         <div className="space-y-6">
           <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              Compounding Growth Loop
+              Go-To-Market Execution
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Our Capital Flywheel: Build → Sell → Recycle → Scale
+              Dual Acquisition Engine: Landowners & Homebuyers
             </h2>
             <p className="text-xs sm:text-sm text-stone-600">
-              Each completed residential development strengthens our NCR brand, increases procurement discounts, and accelerates capital turnaround.
+              Connecting non-developing prime plot owners with affluent homebuyers looking for turnkey luxury living.
             </p>
           </div>
 
-          {/* Flywheel Flow Chart */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-center text-xs">
-            {[
-              { title: "Growth Capital", desc: "Seed ₹6-7 Cr", color: "border-amber-400 bg-amber-50 text-amber-900" },
-              { title: "JDA Acquisition", desc: "Zoned plots", color: "border-stone-200 bg-white text-stone-800" },
-              { title: "Development", desc: "10-12 mo build", color: "border-stone-200 bg-white text-stone-800" },
-              { title: "Inventory Sales", desc: "Premium pricing", color: "border-stone-200 bg-white text-stone-800" },
-              { title: "Capital Recovery", desc: "Cash recycled", color: "border-emerald-300 bg-emerald-50 text-emerald-900" },
-              { title: "Project Profit", desc: "25-35% margin", color: "border-emerald-300 bg-emerald-50 text-emerald-900" },
-              { title: "Larger Pipeline", desc: "Multi-plot deals", color: "border-sky-300 bg-sky-50 text-sky-900" },
-              { title: "Township Scale", desc: "Portfolio JVs", color: "border-purple-300 bg-purple-50 text-purple-900" }
-            ].map((node, i) => (
-              <div key={i} className={`p-3 rounded-xl border-2 ${node.color} flex flex-col justify-between shadow-2xs`}>
-                <span className="text-[10px] font-mono text-stone-500 font-bold">0{i + 1}</span>
-                <span className="font-bold my-1 leading-tight">{node.title}</span>
-                <span className="text-[10px] text-stone-600">{node.desc}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Supply-Side Engine */}
+            <div className="p-5 rounded-2xl bg-white border-2 border-amber-200/80 space-y-4 shadow-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono text-amber-800 uppercase font-bold bg-amber-50 px-2.5 py-1 rounded border border-amber-200">
+                  Supply-Side Engine
+                </span>
+                <span className="text-xs font-serif font-bold text-stone-800">Plot Owners</span>
               </div>
-            ))}
+              <h3 className="text-base font-bold text-stone-900 font-serif">
+                "Don't Sell Your Plot. Develop It."
+              </h3>
+              <div className="space-y-2.5 text-xs text-stone-700">
+                <div className="p-2.5 rounded-xl bg-[#FAF8F5] border border-stone-200/80">
+                  <strong className="text-stone-900 block font-serif">1. Direct Plot Registry Outreach:</strong>
+                  Targeting vacant plot titles across DLF Phases, Sushant Lok, South City, and prime Noida sectors with bespoke feasibility sheets.
+                </div>
+                <div className="p-2.5 rounded-xl bg-[#FAF8F5] border border-stone-200/80">
+                  <strong className="text-stone-900 block font-serif">2. Channel Partner Alliances:</strong>
+                  Incentivizing top-tier NCR land brokers with attractive deal-origination fees and exclusive mandates.
+                </div>
+                <div className="p-2.5 rounded-xl bg-[#FAF8F5] border border-stone-200/80">
+                  <strong className="text-stone-900 block font-serif">3. High-Conversion Proposition:</strong>
+                  Delivers 1.5x–2.0x higher financial value to landowners vs outright distress land sale, with zero construction hassle.
+                </div>
+              </div>
+            </div>
+
+            {/* Demand-Side Engine */}
+            <div className="p-5 rounded-2xl bg-white border-2 border-emerald-200/80 space-y-4 shadow-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono text-emerald-800 uppercase font-bold bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200">
+                  Demand-Side Engine
+                </span>
+                <span className="text-xs font-serif font-bold text-stone-800">Luxury Homebuyers</span>
+              </div>
+              <h3 className="text-base font-bold text-stone-900 font-serif">
+                "Arvane Curated Living"
+              </h3>
+              <div className="space-y-2.5 text-xs text-stone-700">
+                <div className="p-2.5 rounded-xl bg-emerald-50/50 border border-emerald-100">
+                  <strong className="text-stone-900 block font-serif">1. Curated Architecture & Interiors:</strong>
+                  High-ceiling floor plates, Italian marble, VRV air conditioning, smart home automation, and private lift lobbies.
+                </div>
+                <div className="p-2.5 rounded-xl bg-emerald-50/50 border border-emerald-100">
+                  <strong className="text-stone-900 block font-serif">2. Institutional Transparency:</strong>
+                  RERA-aligned contracts, clear OC documentation, and 12-month post-handover builder maintenance warranty.
+                </div>
+                <div className="p-2.5 rounded-xl bg-emerald-50/50 border border-emerald-100">
+                  <strong className="text-stone-900 block font-serif">3. Affluent Target Segment:</strong>
+                  CXOs, doctors, entrepreneurs seeking privacy and independence without builder-floor quality risks (Ticket: ₹4–9 Cr).
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border-2 border-stone-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="space-y-1 text-center sm:text-left">
-              <span className="text-xs font-mono text-amber-800 uppercase font-bold">The Velocity Principle</span>
-              <p className="text-sm font-semibold text-stone-900 font-serif">
-                Turning ₹6–7 Cr of working capital across 3 concurrent projects every 14 months creates ₹20 Cr+ annual development output.
-              </p>
-            </div>
-            <div className="px-4 py-2 rounded-xl bg-amber-500 text-white font-bold font-mono text-sm shrink-0 shadow-sm">
-              BUILD • SELL • RECYCLE • SCALE
-            </div>
+          <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-300 text-center shadow-2xs">
+            <span className="text-xs font-mono text-stone-600 uppercase font-bold block">Integrated Network Advantage</span>
+            <p className="text-sm font-semibold text-stone-900 mt-0.5 font-serif">
+              Landowner trust feeds prime location inventory; homeowner delight accelerates sales velocity and referral capital.
+            </p>
           </div>
         </div>
       );
 
     /* ----------------------------------------------------
-       SLIDE 18: GTM: LANDOWNER ACQUISITION
+       SLIDE 18: THE EVOLUTION OF ARVANE (MASTER ROADMAP)
     ---------------------------------------------------- */
     case 18:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              Supply-Side Strategy
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Landowner Acquisition Engine: "Don't Sell Your Plot. Develop It."
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              A targeted multi-channel origination funnel reaching high-net-worth plot owners across Gurgaon, Delhi, and Noida.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="p-4 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold uppercase">Channel 01</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Direct Landowner Outreach</h3>
-              <p className="text-xs text-stone-600">
-                Targeting vacant plot registries in prime sectors with tailored feasibility reports showing their exact floor-entitlement value.
-              </p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold uppercase">Channel 02</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Channel Partner & Broker Network</h3>
-              <p className="text-xs text-stone-600">
-                Incentivizing top-tier NCR land brokers with attractive origination fees and exclusive mandates for finished inventory.
-              </p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold uppercase">Channel 03</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Digital Geo-Targeted Campaigns</h3>
-              <p className="text-xs text-stone-600">
-                Hyper-local LinkedIn and Meta campaigns targeting plot owners in DLF, Sushant Lok, South City, and Noida sectors.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-300 text-center shadow-2xs">
-            <span className="text-xs font-mono text-stone-600 block uppercase font-bold">Conversion Thesis</span>
-            <p className="text-sm font-semibold text-stone-900 mt-1 font-serif">
-              "We show plot owners that partnering with Arvane delivers 1.5x to 2x the post-tax financial outcome of an outright distress land sale."
-            </p>
-          </div>
-        </div>
-      );
+      return <EvolutionRoadmapMaster onNavigateSlide={onNavigateSlide} />;
 
     /* ----------------------------------------------------
-       SLIDE 19: BUYER ACQUISITION
+       SLIDE 19: ONE PLATFORM. MULTIPLE STRUCTURES.
     ---------------------------------------------------- */
     case 19:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-emerald-800 font-bold bg-emerald-100 px-3 py-1 rounded-full border border-emerald-300">
-              Demand-Side Strategy
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Buyer Proposition: "Not Just a Floor. A Professionally Developed Home."
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              For end buyers, we market architectural pedigree, luxury lifestyle, and turnkey peace of mind.
-            </p>
-          </div>
-
-          {/* 5-Step Product Journey */}
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center text-xs">
-            <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs">
-              <span className="text-amber-800 font-mono font-bold block mb-1">01. Concept</span>
-              <p className="text-stone-700">Prime micro-location, vastu-compliant layout, optimal floor plate.</p>
-            </div>
-            <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs">
-              <span className="text-amber-800 font-mono font-bold block mb-1">02. Design</span>
-              <p className="text-stone-700">Award-winning architects, acoustic glazing, private lift lobbies.</p>
-            </div>
-            <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs">
-              <span className="text-amber-800 font-mono font-bold block mb-1">03. Build</span>
-              <p className="text-stone-700">Earthquake-resistant RCC frame, grade-A steel, rigid waterproofing.</p>
-            </div>
-            <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs">
-              <span className="text-amber-800 font-mono font-bold block mb-1">04. Interiors</span>
-              <p className="text-stone-700">Italian marble, German joinery, VRV air conditioning, automated lighting.</p>
-            </div>
-            <div className="p-4 rounded-xl bg-emerald-50 border-2 border-emerald-300 shadow-2xs">
-              <span className="text-emerald-800 font-mono font-bold block mb-1">05. Handover</span>
-              <p className="text-stone-800 font-medium">OC in hand, clear registry title, 12-month developer maintenance.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs shadow-2xs">
-            <span className="text-stone-700">Target Buyer Demographic: CXOs, tech founders, doctors, affluent families seeking privacy without condo maintenance friction.</span>
-            <span className="text-amber-900 font-mono font-bold whitespace-nowrap bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Average Ticket: ₹4–9 Cr</span>
-          </div>
-        </div>
-      );
+      return <MultipleStructuresView />;
 
     /* ----------------------------------------------------
-       SLIDE 20: PHASED GROWTH STRATEGY
+       SLIDE 20: THE CAPITAL FLYWHEEL
     ---------------------------------------------------- */
     case 20:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-purple-800 font-bold bg-purple-50 px-3 py-1 rounded-full border border-purple-200">
-              Scalability Roadmap
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Phased Platform Growth Strategy
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              A disciplined expansion path from single-plot JDA proofs to multi-project NCR operations and institutional township alliances.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Phase 1 */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-amber-200 space-y-3 shadow-sm">
-              <span className="px-2.5 py-1 rounded bg-amber-100 text-amber-800 border border-amber-300 text-xs font-mono font-bold">
-                PHASE 1 (CURRENT)
-              </span>
-              <h3 className="text-base font-bold text-stone-900 font-serif">Direct Landowner Partnerships</h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
-                Initial portfolio across prime Gurgaon, Delhi, and Noida sectors. Focus on premium & luxury builder floors to establish execution pedigree.
-              </p>
-              <div className="pt-2 text-[11px] text-stone-800 space-y-1 font-mono font-medium">
-                <div>• Prove JDA model & velocity</div>
-                <div>• Establish vendor ecosystem</div>
-              </div>
-            </div>
-
-            {/* Phase 2 */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-sky-200 space-y-3 shadow-sm">
-              <span className="px-2.5 py-1 rounded bg-sky-100 text-sky-800 border border-sky-300 text-xs font-mono font-bold">
-                PHASE 2 (MONTHS 12–24)
-              </span>
-              <h3 className="text-base font-bold text-stone-900 font-serif">Multi-Project NCR Platform</h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
-                Scale to 8–12 simultaneous projects. Standardize feasibility, BIM, bulk procurement, and in-house interior manufacturing.
-              </p>
-              <div className="pt-2 text-[11px] text-stone-800 space-y-1 font-mono font-medium">
-                <div>• Proprietary Property Intelligence Engine</div>
-                <div>• Rapid 12-month capital rotation</div>
-              </div>
-            </div>
-
-            {/* Phase 3 */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-purple-200 space-y-3 shadow-sm">
-              <span className="px-2.5 py-1 rounded bg-purple-100 text-purple-800 border border-purple-300 text-xs font-mono font-bold">
-                PHASE 3 (SCALE)
-              </span>
-              <h3 className="text-base font-bold text-stone-900 font-serif">Township Developer Alliances</h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
-                Partner with large master-planned township developers to develop plotted clusters at institutional scale.
-              </p>
-              <div className="pt-2 text-[11px] text-purple-900 space-y-1 font-mono font-medium">
-                <div>• Portfolio development contracts</div>
-                <div>• Institutional capital access</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+      return <CapitalFlywheelView />;
 
     /* ----------------------------------------------------
-       SLIDE 21: THE TOWNSHIP PARTNERSHIP OPPORTUNITY
+       SLIDE 21: THE STRATEGIC MOAT
     ---------------------------------------------------- */
     case 21:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-purple-800 font-bold bg-purple-50 px-3 py-1 rounded-full border border-purple-200">
-              Institutional Evolution
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              The Township Partnership Opportunity
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              Transforming from plot-by-plot landowner deals into scaled portfolio development with established NCR land aggregators.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            {/* Comparison Table */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-stone-200/90 space-y-3 shadow-sm">
-              <span className="text-xs font-mono text-stone-600 uppercase font-bold">Strategic Evolution</span>
-              <div className="space-y-2 text-xs">
-                <div className="p-3 rounded-xl bg-amber-50 border border-amber-200">
-                  <span className="text-amber-900 font-bold block font-serif">TODAY: Individual Landowner</span>
-                  <p className="text-stone-700 mt-1">1 Landowner → 1 Plot → 1 Project (Higher origination effort per sq ft).</p>
-                </div>
-                <div className="p-3 rounded-xl bg-purple-50 border border-purple-200">
-                  <span className="text-purple-900 font-bold block font-serif">FUTURE: Township Developer Alliances</span>
-                  <p className="text-stone-700 mt-1">1 Township Developer → 10–25 Selected Plots → Scaled Portfolio Development.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Potential Counterparties & Symbiosis */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-stone-200/90 space-y-3 shadow-sm">
-              <span className="text-xs font-mono text-stone-600 uppercase font-bold">Illustrative Counterparty Archetypes</span>
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                {["DLF Limited", "BPTP Townships", "Orris Infrastructure", "Adani Realty", "Vatika Group", "Emaar India"].map((dev, i) => (
-                  <div key={i} className="p-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-800 text-center font-semibold shadow-2xs">
-                    {dev}
-                  </div>
-                ))}
-              </div>
-              <p className="text-[10px] text-stone-500 italic pt-1">
-                * Note: Illustrative examples of institutional township developers in NCR; does not imply an existing formal partnership.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-300 text-center shadow-2xs">
-            <span className="text-xs text-stone-600 block font-mono font-bold uppercase">Symbiotic Value Creation</span>
-            <div className="text-sm sm:text-base font-bold text-stone-900 mt-1 font-serif">
-              Township Developer (Land/Plots) + Arvane (Capital, Design, Turnkey Delivery & Sales) = Accelerated Inventory Monetization
-            </div>
-          </div>
-        </div>
-      );
+      return <StrategicMoatView />;
 
     /* ----------------------------------------------------
-       SLIDE 22: LONG-TERM BUSINESS MODEL
+       SLIDE 22: THE TOWNSHIP PARTNERSHIP OPPORTUNITY
     ---------------------------------------------------- */
     case 22:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              Horizon Transformation
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Long-Term Platform Transformation
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              Building the operating system for institutional residential development across India's top metropolitan growth corridors.
-            </p>
-          </div>
-
-          {/* Transformation Stepper */}
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center text-xs">
-            <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs">
-              <span className="text-amber-800 font-mono font-bold block mb-1">TODAY</span>
-              <h4 className="font-bold text-stone-900 font-serif">Plot-by-Plot JDA</h4>
-              <p className="text-stone-600 text-[11px] mt-1">Direct landowner builder floor projects in Gurgaon.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs">
-              <span className="text-amber-800 font-mono font-bold block mb-1">TOMORROW</span>
-              <h4 className="font-bold text-stone-900 font-serif">Multi-Project NCR</h4>
-              <p className="text-stone-600 text-[11px] mt-1">Standardized platform across Gurgaon, Delhi, and Noida.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-white border border-purple-200 shadow-2xs">
-              <span className="text-purple-800 font-mono font-bold block mb-1">SCALE</span>
-              <h4 className="font-bold text-stone-900 font-serif">Township Alliances</h4>
-              <p className="text-stone-600 text-[11px] mt-1">Multi-plot development mandates with land aggregators.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-white border border-purple-300 shadow-2xs">
-              <span className="text-purple-800 font-mono font-bold block mb-1">MATURITY</span>
-              <h4 className="font-bold text-stone-900 font-serif">Institutional Capital</h4>
-              <p className="text-stone-700 text-[11px] mt-1">Co-investment SPVs with domestic & global real estate funds.</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-400 shadow-md">
-              <span className="text-amber-900 font-mono font-bold block mb-1">LONG TERM</span>
-              <h4 className="font-bold text-stone-900 font-serif">Development Platform</h4>
-              <p className="text-stone-800 text-[11px] mt-1 font-medium">Low-rise communities, luxury villas, and multi-city expansion.</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-amber-50/90 border-2 border-amber-300 text-center font-serif text-lg font-bold text-amber-950 shadow-2xs">
-            ARVANE: A SCALABLE NCR RESIDENTIAL DEVELOPMENT PLATFORM
-          </div>
-        </div>
-      );
+      return <TownshipOpportunityView />;
 
     /* ----------------------------------------------------
-       SLIDE 23: COMPETITIVE ADVANTAGE
+       SLIDE 23: THE ECONOMIC LOGIC
     ---------------------------------------------------- */
     case 23:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-emerald-800 font-bold bg-emerald-100 px-3 py-1 rounded-full border border-emerald-300">
-              Strategic Moats
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Five Pillars of Competitive Advantage
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              Built to outperform both unorganized local contractors and slow-moving conglomerate builders.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="p-5 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold">01. ASSET-LIGHT MODEL</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Zero Land Acquisition Debt</h3>
-              <p className="text-xs text-stone-600">
-                Landowner partnerships free up 100% of investor capital for direct value addition and agile expansion.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold">02. BESPOKE UNDERWRITING</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Individual Project Economics</h3>
-              <p className="text-xs text-stone-600">
-                Every plot evaluated on actual municipal zoning, setbacks, and local buyer price tolerance.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold">03. INTEGRATED DEVELOPMENT</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Full Lifecycle Control</h3>
-              <p className="text-xs text-stone-600">
-                Architecture + procurement + structural engineering + interiors + sales captured under one roof.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold">04. TECH-ENABLED ENGINE</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">Property Intelligence™</h3>
-              <p className="text-xs text-stone-600">
-                Algorithmic feasibility triage provides instant Go / Negotiate / Reject decisions on prospective plots.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border-2 border-stone-200/90 space-y-2 shadow-2xs">
-              <span className="text-xs font-mono text-amber-800 font-bold">05. CAPITAL RECYCLING</span>
-              <h3 className="font-bold text-stone-900 text-sm font-serif">High Velocity Rotation</h3>
-              <p className="text-xs text-stone-600">
-                Recovered capital and profits redeployed rapidly into fresh pipelines, compounding returns.
-              </p>
-            </div>
-
-            <div className="p-5 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 space-y-2 flex flex-col justify-center shadow-md">
-              <span className="text-xs font-mono text-amber-800 font-bold">SUMMARY</span>
-              <div className="font-bold text-stone-900 text-sm font-serif">Institutional Discipline</div>
-              <p className="text-xs text-stone-700 font-medium">
-                Delivering high-end boutique quality with corporate governance standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      );
+      return <EconomicLogicView />;
 
     /* ----------------------------------------------------
-       SLIDE 24: THE INVESTMENT THESIS
+       SLIDE 24: THE 5-YEAR STRATEGIC EVOLUTION
     ---------------------------------------------------- */
     case 24:
+      return <FiveYearEvolutionView />;
+
+    /* ----------------------------------------------------
+       SLIDE 25: PLATFORM MANIFESTO
+    ---------------------------------------------------- */
+    case 25:
+      return <PlatformManifestoView onNavigateSlide={onNavigateSlide} />;
+
+    /* ----------------------------------------------------
+       SLIDE 26: THE INVESTMENT THESIS
+    ---------------------------------------------------- */
+    case 26:
       return (
         <div className="space-y-6">
           <div className="text-center max-w-3xl mx-auto space-y-2">
@@ -1656,9 +1395,9 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
       );
 
     /* ----------------------------------------------------
-       SLIDE 25: FUNDING ASK
+       SLIDE 27: FUNDING ASK
     ---------------------------------------------------- */
-    case 25:
+    case 27:
       return (
         <div className="space-y-6">
           <div className="text-center max-w-3xl mx-auto space-y-2">
@@ -1666,112 +1405,227 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
               Strategic Capital Call
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Funding Ask: ₹6–7 Crore Strategic Growth Capital
+              Funding Ask: ₹7.0 Crore Strategic Growth Capital
             </h2>
             <p className="text-xs sm:text-sm text-stone-600">
-              Growth equity to scale development working capital, accelerate plot acquisitions, and expand the technology engine.
+              Primary growth equity to scale development working capital, accelerate plot acquisitions, and expand the technology engine.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-400 text-center space-y-3 shadow-md">
-              <span className="text-xs font-mono text-amber-900 uppercase font-bold">Capital Requirement</span>
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50 via-amber-100/40 to-orange-50 border-2 border-amber-400 text-center space-y-3 shadow-md">
+              <span className="text-xs font-mono text-amber-900 uppercase font-bold tracking-wider">Total Capital Requirement</span>
               <div className="text-4xl sm:text-5xl font-extrabold text-amber-950 font-mono">
-                ₹6–7 CR
+                ₹7.0 CR
               </div>
-              <p className="text-xs text-stone-700">
-                Progressively deployed across initial NCR project acquisitions and recycled as customer milestones mature.
+              <div className="inline-block px-3 py-1 bg-amber-200/80 rounded-full text-xs font-bold text-amber-900">
+                Asset-Light NCR Development Deployment
+              </div>
+              <p className="text-xs text-stone-700 leading-relaxed pt-1">
+                Progressively deployed across initial NCR boutique luxury projects and continuously recycled as 12–14 month floor sales mature.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white border-2 border-stone-200/90 space-y-3 text-xs shadow-sm">
               <span className="font-bold text-stone-900 text-sm block font-serif">Core Capital Deployment Mandates:</span>
-              <ul className="space-y-2 text-stone-700">
-                <li className="flex items-center gap-2">
+              <ul className="space-y-2.5 text-stone-700">
+                <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Development Working Capital:</strong> Project mobilization & subcontractor bridging.</span>
+                  <span><strong>Development Working Capital (₹3.50 Cr / 50%):</strong> Direct project cashflow bridging & MEP advances.</span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Plot Pipeline Execution:</strong> Legal title diligence, sanctions, and registrations.</span>
+                  <span><strong>Construction Mobilisation (₹1.05 Cr / 15%):</strong> Bulk steel/cement contracts & site infrastructure.</span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Technology Engine:</strong> Expanding automated GIS & feasibility underwriting tools.</span>
+                  <span><strong>Deal Acquisition & Diligence (₹0.55 Cr / 8%):</strong> 30-year title diligence, soil tests & sanctions.</span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Core PMO Team:</strong> Senior structural engineers and project managers.</span>
+                  <span><strong>PMO, Tech, Sales & Reserves (₹1.90 Cr / 27%):</strong> Senior PM team, GIS engine & liquidity cushion.</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-[#FAF8F5] border border-stone-200 text-[11px] text-stone-600 text-center">
-            * Capital is deployed in tranches linked to specific JDA signing milestones and construction progress.
+          <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200 text-xs text-stone-600 text-center flex flex-wrap items-center justify-center gap-2">
+            <span className="font-bold text-amber-900 font-mono">TRANCHE-LINKED DISCIPLINE:</span>
+            <span>Capital is drawn in structured tranches linked to verified JDA title registrations and construction milestones.</span>
           </div>
         </div>
       );
 
     /* ----------------------------------------------------
-       SLIDE 26: INVESTOR EQUITY
+       SLIDE 28: INVESTMENT OPPORTUNITY
     ---------------------------------------------------- */
-    case 26:
+    case 28:
       return (
-        <div className="space-y-6">
+        <div className="space-y-5">
           <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
               Proposed Transaction Structure
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              Investor Equity: 5% – 8% Strategic Minority
+              Investment Opportunity: ₹7 Cr for 5% Equity
             </h2>
             <p className="text-xs sm:text-sm text-stone-600">
-              Structuring a collaborative, high-alignment partnership with strategic real-estate and early-stage capital partners.
+              ₹7.0 Crore Growth Capital for 5% Strategic Platform Equity + 10% Priority Profit Sharing until 200% Return (₹14.0 Cr).
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-5 rounded-2xl bg-white border-2 border-amber-300 text-center space-y-2 shadow-sm">
-              <span className="text-xs font-mono text-amber-800 uppercase font-bold">Indicative Equity Range</span>
-              <div className="text-3xl sm:text-4xl font-bold text-amber-900 font-mono">5% – 8%</div>
-              <p className="text-[11px] text-stone-600 font-semibold">Strategic Minority Shareholding</p>
+          {/* 3 Core Term Pillar Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-white border-2 border-emerald-400 text-center space-y-2 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded-bl-lg">
+                PRIMARY ASK
+              </div>
+              <span className="text-xs font-mono text-emerald-800 uppercase font-bold">Growth Capital Ask</span>
+              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-950 font-mono">₹7.0 CR</div>
+              <p className="text-[11px] text-stone-600 font-medium">Deployed into asset-light project working capital, mobilization & pipeline</p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border-2 border-emerald-300 text-center space-y-2 shadow-sm">
-              <span className="text-xs font-mono text-emerald-800 uppercase font-bold">Investment Amount</span>
-              <div className="text-3xl sm:text-4xl font-bold text-emerald-900 font-mono">₹6–7 Cr</div>
-              <p className="text-[11px] text-stone-600 font-semibold">Primary Growth Capital</p>
+            <div className="p-5 rounded-2xl bg-white border-2 border-amber-400 text-center space-y-2 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded-bl-lg">
+                PERMANENT
+              </div>
+              <span className="text-xs font-mono text-amber-800 uppercase font-bold">Strategic Platform Equity</span>
+              <div className="text-3xl sm:text-4xl font-extrabold text-amber-950 font-mono">5.0%</div>
+              <p className="text-[11px] text-stone-600 font-medium">Permanent platform equity + board observer rights & compounding enterprise upside</p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border-2 border-sky-300 text-center space-y-2 shadow-sm">
-              <span className="text-xs font-mono text-sky-800 uppercase font-bold">Investor Governance</span>
-              <div className="text-xl font-bold text-sky-900 font-serif">Board Alignment</div>
-              <p className="text-[11px] text-stone-600 font-semibold">Information rights, audit oversight & quarterly reviews</p>
+            <div className="p-5 rounded-2xl bg-white border-2 border-sky-400 text-center space-y-2 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-sky-500 text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded-bl-lg">
+                ACCELERATED PAYBACK
+              </div>
+              <span className="text-xs font-mono text-sky-800 uppercase font-bold">Profit Sharing Waterfall</span>
+              <div className="text-3xl sm:text-4xl font-extrabold text-sky-950 font-mono">10.0%</div>
+              <p className="text-[11px] text-stone-600 font-medium">Distributed until 200% return (₹14.0 Cr cash returned) • <strong className="text-sky-900">Open to Structure</strong></p>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200 text-xs text-stone-600 text-center">
-            <strong>Structuring Note:</strong> Proposed equity percentage is indicative and subject to final formal valuation, investment structuring, legal due diligence, and definitive SHA/SSA negotiations.
+          {/* Open to Profit Sharing Banner */}
+          <div className="p-3.5 rounded-xl bg-gradient-to-r from-sky-50 via-emerald-50/60 to-amber-50 border border-sky-300 flex flex-wrap items-center justify-between gap-3 shadow-2xs">
+            <div className="flex items-center gap-2.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-sky-600 animate-pulse shrink-0"></span>
+              <span className="text-xs font-bold text-stone-900 font-serif">
+                Open & Flexible on Profit-Sharing Structuring:
+              </span>
+              <span className="text-xs text-stone-700">
+                While our base model proposes 10% profit sharing up to 200% return (₹14 Cr), we are actively open to calibrating the profit-sharing percentage, cashflow waterfall speed, and payback hurdles to align with investor preferences.
+              </span>
+            </div>
+          </div>
+
+          {/* Detailed Dual-Layer Payback & Compounding Framework */}
+          <div className="p-5 rounded-2xl bg-[#FAF8F5] border-2 border-stone-200/90 space-y-4 shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-200 pb-3">
+              <span className="text-xs font-bold font-serif text-stone-900 uppercase tracking-wide">
+                Two-Phase Return Architecture: Accelerated Cash Recovery + Perpetual Platform Ownership
+              </span>
+              <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold">
+                Target MoIC: 2.0x Cash Payout + 5% Platform Equity In Perpetuity
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              {/* Phase 1 */}
+              <div className="p-4 rounded-xl bg-white border border-stone-200 space-y-2.5 shadow-2xs">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-sky-900 font-serif text-sm">PHASE 1: Priority Cash Payback</span>
+                  <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-sky-50 text-sky-800 font-bold border border-sky-200">
+                    Up to ₹14.0 Cr (200% Return)
+                  </span>
+                </div>
+                <p className="text-stone-600 leading-relaxed">
+                  Investor receives an ongoing <strong>10% share of net project profits</strong> across active development completions.
+                </p>
+                <div className="p-2.5 rounded-lg bg-sky-50/70 border border-sky-200 space-y-1 text-[11px] text-stone-700">
+                  <div className="flex justify-between">
+                    <span>Initial Capital Deployed:</span>
+                    <strong className="font-mono text-stone-900">₹7.00 Cr</strong>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>200% Return Milestone:</span>
+                    <strong className="font-mono text-emerald-800">₹14.00 Cr Total Cash Payout</strong>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Profit Sharing Status:</span>
+                    <span className="text-sky-800 font-semibold">Active until ₹14 Cr payout is achieved</span>
+                  </div>
+                  <div className="flex justify-between border-t border-sky-200/60 pt-1 mt-1 text-[10px] text-stone-500">
+                    <span>Investor Flexibility:</span>
+                    <span className="text-sky-900 font-bold">Open to custom waterfall rates</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phase 2 */}
+              <div className="p-4 rounded-xl bg-white border border-stone-200 space-y-2.5 shadow-2xs">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-amber-900 font-serif text-sm">PHASE 2: Perpetual Platform Equity</span>
+                  <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-bold border border-amber-200">
+                    5.0% In Perpetuity
+                  </span>
+                </div>
+                <p className="text-stone-600 leading-relaxed">
+                  Once the 200% return (₹14.0 Cr) is returned, the 10% profit sharing concludes. The investor <strong>permanently retains 5.0% equity</strong> in the platform.
+                </p>
+                <div className="p-2.5 rounded-lg bg-amber-50/70 border border-amber-200 space-y-1 text-[11px] text-stone-700">
+                  <div className="flex justify-between">
+                    <span>Post-Payback Equity:</span>
+                    <strong className="font-mono text-amber-900">5.0% Permanent Holding</strong>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Enterprise Upside:</span>
+                    <span className="text-stone-800 font-semibold">Scale-up valuation, dividends & strategic exit</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Investor Governance:</span>
+                    <span className="text-stone-800 font-semibold">Board observer seat & audit transparency</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Win-Win Highlights */}
+            <div className="p-3 rounded-xl bg-white border border-stone-200 text-xs text-stone-700 grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+              <div>
+                <span className="text-emerald-700 font-bold block">1. Early Downside De-Risking</span>
+                <span className="text-[11px] text-stone-500">Cashflow distributions return 2.0x capital early</span>
+              </div>
+              <div className="sm:border-x border-stone-200 sm:px-2">
+                <span className="text-amber-700 font-bold block">2. Compounding Upside</span>
+                <span className="text-[11px] text-stone-500">5% equity participates in NCR platform expansion</span>
+              </div>
+              <div>
+                <span className="text-sky-700 font-bold block">3. Founder & Investor Alignment</span>
+                <span className="text-[11px] text-stone-500">Open & aligned structure based on actual project profit</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-white border border-stone-200 text-[11px] text-stone-500 text-center">
+            <strong>Structuring Note:</strong> Terms are indicative and subject to formal legal due diligence, definitive Shareholders' Agreement (SHA), Share Subscription Agreement (SSA), and board-approved governance charters.
           </div>
         </div>
       );
 
     /* ----------------------------------------------------
-       SLIDE 27: USE OF FUNDS
+       SLIDE 29: USE OF FUNDS
     ---------------------------------------------------- */
-    case 27:
+    case 29:
       return (
         <div className="space-y-6">
           <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              Capital Allocation
+              Capital Allocation (₹7.0 Cr)
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
               Use of Funds: Disciplined Deployment Plan
             </h2>
             <p className="text-xs sm:text-sm text-stone-600">
-              Over 63% of capital is deployed directly into income-generating development working capital and mobilization.
+              Over 65% of capital is deployed directly into income-generating development working capital, subcontractor advances, and material procurement.
             </p>
           </div>
 
@@ -1789,15 +1643,15 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
           </div>
 
           <p className="text-[10px] text-stone-500 italic text-center">
-            * Illustrative allocation — subject to final project acquisition pipeline and board-approved deployment schedule.
+            * Illustrative allocation across ₹7.0 Crore total round — subject to final project acquisition pipeline and board-approved deployment schedule.
           </p>
         </div>
       );
 
     /* ----------------------------------------------------
-       SLIDE 28: KEY RISKS & MITIGATION
+       SLIDE 30: KEY RISKS & MITIGATION
     ---------------------------------------------------- */
-    case 28:
+    case 30:
       return (
         <div className="space-y-6">
           <div className="text-center max-w-3xl mx-auto space-y-2">
@@ -1831,101 +1685,6 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
       );
 
     /* ----------------------------------------------------
-       SLIDE 29: 3-YEAR VISION
-    ---------------------------------------------------- */
-    case 29:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              Operational Roadmap
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              3-Year Operational Execution Milestones
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              Realistic, measurable milestones progressing from proof-of-concept to institutional scale.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Year 1 */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-amber-200 space-y-3 shadow-sm">
-              <span className="text-xs font-mono text-amber-800 uppercase font-bold">YEAR 1: PROVE THE MODEL</span>
-              <ul className="space-y-2 text-xs text-stone-700">
-                <li>• Execute initial 4 NCR projects across Gurgaon & Noida.</li>
-                <li>• Establish centralized vendor procurement ecosystem.</li>
-                <li>• Scale landowner digital acquisition funnels.</li>
-                <li>• Deliver 100% on-time structural milestones.</li>
-              </ul>
-            </div>
-
-            {/* Year 2 */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-sky-200 space-y-3 shadow-sm">
-              <span className="text-xs font-mono text-sky-800 uppercase font-bold">YEAR 2: BUILD REPEATABILITY</span>
-              <ul className="space-y-2 text-xs text-stone-700">
-                <li>• Expand pipeline to 8–12 active simultaneous developments.</li>
-                <li>• Accelerate capital rotation to 12 months per project.</li>
-                <li>• Deploy Version 2.0 of Property Intelligence Engine.</li>
-                <li>• Build recognizable premium residential brand in NCR.</li>
-              </ul>
-            </div>
-
-            {/* Year 3 */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-purple-200 space-y-3 shadow-sm">
-              <span className="text-xs font-mono text-purple-800 uppercase font-bold">YEAR 3: SCALE THE PLATFORM</span>
-              <ul className="space-y-2 text-xs text-stone-700">
-                <li>• Initiate strategic township developer partnerships.</li>
-                <li>• Formalize institutional capital co-investment SPVs.</li>
-                <li>• Achieve ₹100 Cr+ annual Gross Development Value.</li>
-                <li>• Evaluate expansion into adjacent Tier-1 micro-markets.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      );
-
-    /* ----------------------------------------------------
-       SLIDE 30: THE END GAME
-    ---------------------------------------------------- */
-    case 30:
-      return (
-        <div className="space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-amber-800 font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-              Strategic Synthesis
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight font-serif pt-1">
-              The End Game: A Scalable Platform
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600">
-              Transforming fragmented plot development into an institutional residential platform.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50/90 via-white to-orange-50/60 border-2 border-amber-300 text-center space-y-4 max-w-4xl mx-auto shadow-md">
-            <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-mono">
-              <span className="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-stone-800 shadow-2xs font-semibold">Landowners</span>
-              <span className="text-amber-600 font-bold">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-amber-500 text-white font-bold shadow-2xs">Arvane Platform</span>
-              <span className="text-amber-600 font-bold">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-stone-800 shadow-2xs font-semibold">Turnkey Homes</span>
-              <span className="text-amber-600 font-bold">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-purple-100 border border-purple-300 text-purple-900 font-bold shadow-2xs">Township Alliances</span>
-            </div>
-
-            <div className="text-xl sm:text-2xl font-bold text-stone-900 pt-2 font-serif">
-              ARVANE: A SCALABLE NCR RESIDENTIAL DEVELOPMENT PLATFORM
-            </div>
-
-            <blockquote className="text-sm sm:text-base text-amber-900 italic font-serif max-w-2xl mx-auto leading-relaxed font-medium">
-              "We are not building one project. We are building a repeatable system for turning land into value."
-            </blockquote>
-          </div>
-        </div>
-      );
-
-    /* ----------------------------------------------------
        SLIDE 31: CLOSING SLIDE
     ---------------------------------------------------- */
     case 31:
@@ -1949,9 +1708,14 @@ export default function SlideRenderer({ slide, onNavigateSlide }: SlideRendererP
               NCR • Residential Development • Builder Floors • Strategic Partnerships
             </p>
 
-            <div className="p-4 rounded-xl bg-white border-2 border-amber-300 inline-block shadow-md">
-              <span className="text-xs text-stone-500 uppercase font-mono font-bold block">Strategic Investment Discussion</span>
-              <span className="text-lg sm:text-xl font-bold text-amber-900 font-mono">₹6–7 Cr Strategic Growth Capital</span>
+            <div className="p-4 rounded-2xl bg-white border-2 border-amber-300 inline-block shadow-md space-y-1">
+              <span className="text-xs text-stone-500 uppercase font-mono font-bold block">Strategic Investment Summary</span>
+              <div className="text-lg sm:text-2xl font-extrabold text-amber-950 font-mono">
+                ₹7.0 Cr Growth Capital
+              </div>
+              <div className="text-xs font-semibold text-emerald-800 font-mono">
+                5% Strategic Equity + 10% Profit Sharing (Until 200% / ₹14 Cr Return)
+              </div>
             </div>
           </div>
 
